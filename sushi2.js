@@ -18,8 +18,6 @@ function getMaximumEatenDishCount(N, D, K) {
       break
     }
     res.push(relevantArr[0])
-    // console.log(`res at ${res[res.length-1][1]}`, res)
-
   }
 
   return res.length;

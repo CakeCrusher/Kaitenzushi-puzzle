@@ -5,8 +5,6 @@ function getMaximumEatenDishCount(N, D, K) {
   // K = memory
   let res = []
   let scanIndex = 0
-  // get all the unique values in D
-  let uniqueD = [...new Set(D)]
   while (scanIndex < N) {
     const slice = res.length > K ? [...res.slice(res.length-K, res.length)] : res
     if (!slice.includes(D[scanIndex])) {

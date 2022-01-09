@@ -5,11 +5,15 @@ function getMaximumEatenDishCount(N, D, K) {
   // K = memory
   // prevent consecutive duplicates in D
   let res = [...new Set(D.slice(0, K))];
+  let uniqueD = [...new Set(D)];
 
   for (let i = K; i < D.length; i++) {
     const slice = res.length > K ? res.slice(res.length - K, res.length) : res;
     if (!slice.includes(D[i])) {
       res.push(D[i]);
+    }
+    if (K >= uniqueD.length && slice.length >= uniqueD.length) {
+      return res.length;
     }
   }
   

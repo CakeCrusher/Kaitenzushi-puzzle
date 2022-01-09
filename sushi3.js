@@ -18,13 +18,6 @@ function getMaximumEatenDishCount(N, D, K) {
     if (!slice.includes(D[i])) {
       res.push(D[i]);
     }
-    // res.push(D[i]);
-    // for (let j = 0; j < slice.length-1; j++) {
-    //   console.log(`slice at ${slice[j]} and D at ${D[i]}`)
-    //   if (slice[j] === D[i]) {
-    //     res.pop()
-    //   }
-    // }
     
     if (K === res.length && res.length === uniqueD.length) {
       break;
